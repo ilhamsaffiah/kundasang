@@ -1,0 +1,691 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+}
+
+.h1{
+    text-align: left;
+}
+
+body{
+   font-family: Poppins;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: coral;
+    text-shadow: 0 0 25px #714e39,
+                0 0 50px #714e39;
+    transform: scale(1.1);
+}
+
+span{
+    color: coral;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+   
+}
+
+.navbar a.active{
+    color: coral;
+    border-bottom: 3px solid coral;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:coral;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.home{
+    align-items: center;
+    display: flex;
+    gap: 7em;
+    width: 100%;
+    padding: 0;
+}
+
+.view {
+    padding: 5% 8%;
+}
+
+.logo1 {
+    width:40px;
+}
+
+.carousell {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+    position: relative;
+ 
+
+    
+}
+
+.carousell .list .item{
+    position: relative;
+    inset: 0 0 0 0;
+}
+
+.carousell .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousell .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #004;
+}
+
+.carousell .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousell .list .item .content .title,
+.carousell .list .item .content .topic{
+    font-weight: bold;
+    font-size: 5em;
+    line-height: 1.3em;
+}
+
+.carousell .list .item .content .topic{
+    color: #f1683a;
+}
+
+.button{
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid coral;
+    border-radius: 0px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: coral;
+    color: black;
+    border: 2px solid coral;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: black;
+    height: 190px;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+footer .social-icons, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icons li, footer .menu li{
+    list-style: none;
+}
+
+footer .social-icons li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+}
+footer .social-icons li a:hover{
+    transform: translateY(-10px);
+    color: #f1683a;
+}
+footer .menu li a{
+    font-size: 1.2em;
+    color: white;
+    margin-right:10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+footer .menu li a:hover{
+    color: #f1683a;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    opacity: 0.75;
+}
+
+.container1{
+    min-height: 100vh;
+    background: #08071d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/road.jpg") no-repeat center center/cover;
+}
+
+.container1 form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.container1 form h1{
+    color: black;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container1 form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid black;
+}
+
+.container1 form input::placeholder{
+    color: black;
+}
+
+.container1 form #lastName,
+.container1 form #mobile{
+    margin-left: 20px;
+}
+
+.container1 form h4{
+    color: black;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container1 form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+
+.container1 form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container1 form #button:hover{
+    opacity: 0.7;
+}
+
+/*places*/
+.wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+}
+
+.container2 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('images/personhike.jpg');
+}
+.card[for="c2"] {
+    background-image: url('images/paragliding.png');
+}
+.card[for="c3"] {
+    background-image: url('images/viaferreta.png');
+}
+.card[for="c4"] {
+    background-image: url('images/cowkundasang.jpg');
+}
+.card[for="c5"] {
+    background-image: url('images/atv.png');
+}
+
+.align{
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    line-height: 1.3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.align1{
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 1.3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+yah parts
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.community-page {
+    background-image: url(images/mountkinabalu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.logo-container img {
+    max-width: 150px; 
+    height: auto;
+}
+
+section .leftBox {
+    width: 50%;
+    max-height: max-content;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+section .leftBox .content {
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    padding: 40px;
+    transition: .5s;
+    border-radius: 10%;
+}
+
+section .leftBox .content:hover {
+    background: #e91e63;
+}
+
+section .leftBox .content h1 {
+    margin: 0;
+    padding: 10%;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #d3cdcd;
+}
+
+section .leftBox .content p {
+    margin: 10px 0 0;
+    padding: 8%;
+    font-size: 2vh;
+}
+
+.section .learn-more {
+    text-align: center;
+    margin: 50px 0;
+    padding: 100%;
+    margin-top: 30%;
+}
+
+.box-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 50px;
+    margin-right: 10%;
+}
+
+.box-item {
+    position: relative;
+    border: 1px solid #08071d;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+    border-radius: 10%;
+}
+
+.box-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #b0b0ba;
+    z-index: 0;
+    border-radius: 10%;
+}
+
+.box-item:hover {
+    transform: scale(1.05);
+    box-shadow: #b0b0ba;
+}
+
+.box-item h2 {
+    margin-bottom: 0;
+    padding: 10%;
+    color: #fff;
+    font-size: 2em;
+}
+
+.box-item p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #08071d;
+}
+
+
+.box-item button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box-item button:hover {
+    background-color: #e91e63;
+}
+
+.box-item h2, .box-item button, .box-item p {
+    position: relative;
+    z-index: 1;
+}
+
+history
+
+.history-section {
+    padding: 50px 20px;
+    background: rgba(141, 117, 117, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.history-page {
+    background-image: url(images/blurrywall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container h1 {
+    position: relative;
+    text-align: center;
+    padding: 5%;
+    font-size: 5vh;
+    color: tomato;
+}
+
+.flip-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.flip-card-back {
+    background-color: orange;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.early-settlement .flip-card-front {
+    background-image: url('images/earlysettelment.webp');
+}
+
+.world-war-ii .flip-card-front {
+    background-image: url('images/world\ war\ 2.avif');
+}
+
+.post-war-development .flip-card-front {
+    background-image: url('images/postwar.jpg');
+}
+
+.modern-day .flip-card-front {
+    background-image: url('images/gunungkinabalu.jpg');
+}

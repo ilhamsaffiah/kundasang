@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="icons" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Food</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style type="text/css">
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    }
+
+body{
+    font-family: Poppins;
+    background-color: #eae7b1;
+    color: black;
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    }
+
+a{
+    text-decoration: none;
+    color: black;
+    }
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    }
+
+.logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+    }
+
+.logo:hover{
+    color: coral;
+    text-shadow: 0 0 25px #714e39,
+                0 0 50px #714e39;
+    transform: scale(1.1);
+    }
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    }
+
+.navbar a.active{
+    color: coral;
+    border-bottom: 3px solid coral;
+    }
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:coral;
+    transition: .3s;
+    }
+
+.navbar a:hover::before {
+    width: 100%;
+    }
+
+/* content down */
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.container .card{
+        position: relative;
+        max-width: 300px;
+        height: 220px;
+        background-color: #fff;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+    }
+
+.container .card:hover{
+        height: 430px;
+    }
+
+.container .card .image{
+        position: relative;
+        width: 260px;
+        height: 200px;
+        top: -60px;
+        left: 20px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.container .card .image img{
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+.container .card .content{
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+.container .card:hover .content{
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+    }
+
+.view{
+    padding: 5% 8%;
+    margin-top: 0px;
+}
+
+.view .container{
+    margin: -5cm;
+}
+
+.button{
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid coral;
+    border-radius: 0px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: coral;
+    color: black;
+    border: 2px solid coral;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: black;
+    height: 190px;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+footer .social-icons, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icons li, footer .menu li{
+    list-style: none;
+}
+
+footer .social-icons li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+}
+footer .social-icons li a:hover{
+    transform: translateY(-10px);
+    color: #f1683a;
+}
+footer .menu li a{
+    font-size: 1.2em;
+    color: white;
+    margin-right:10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+footer .menu li a:hover{
+    color: #f1683a;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    opacity: 0.75;
+}
+
+.card-list .card-item{
+    color: black;
+    width: 400px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 13cm;
+}
+
+.card-list .card-item .user-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid black;
+    padding: 4px;
+
+}
+
+.card-list .card-item .user-profession{
+    font-size: 1.15rem;
+    color: black;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.container1{
+    margin-top: 50px;
+
+}
+
+.align{
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+
+.align1{
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+</style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Kundasang</a>
+
+        <nav class="navbar" id="nav-menu">
+    
+            <a href="index.html" >HOME</a>
+            <a href="local.html">COMMUNITY</a>
+            <a href="history.html">HISTORY</a>
+            <a href="places.html">PLACES</a>
+            <a href="nature.html">NATURE</a>
+            <a href="food.html"class="active">FOODIE</a> 
+      
+        </nav>
+        <div class="button">
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </header>
+    <section class="text">
+        <h3 class="align"> FAMOUS LOCAL CUISINE </h3>
+        <p class="align1">Kundasang, located in Sabah, Malaysia, offers a variety of delicious local cuisines that reflect the rich cultural heritage and natural<br>abundance of the region. Here are some famous local dishes you should try when visiting Kundasang:</p>
+    </section>
+    <div class="container1 swiper">
+        <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 1.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Hinava </h2>
+                    <p class="user-profession">Hinava is a traditional Kadazan-Dusun dish made from raw fish marinated in lime juice. It is often prepared with fish like mackerel, mixed with ginger, red onions, chilies, and grated Bambangan seed (a local wild mango).</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 2.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Ngiu Chap </h2>
+                    <p class="user-profession">Ngiu Chap is a popular Chinese-influenced beef noodle soup. It typically includes various cuts of beef, including tenderloin, tripe, and beef balls, served in a flavorful broth with noodles.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 3.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Pinasakan </h2>
+                    <p class="user-profession">Pinasakan is a traditional Kadazan-Dusun dish made from fish, typically freshwater fish, cooked with takob-akob (a sour fruit), turmeric, and other local herbs.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 4.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Bosou </h2>
+                    <p class="user-profession">Bosou, also known as “noonsom” in Kadazan-Dusun, is a fermented dish made from raw freshwater fish mixed with rice, salt, and pangi (a local herb).</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 5.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Tuaran Mee </h2>
+                    <p class="user-profession">Tuaran Mee is a famous noodle dish originating from Tuaran, a town near Kundasang. The noodles are egg-based and are stir-fried with eggs, pork, and vegetables.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 6.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Ambuyat </h2>
+                    <p class="user-profession">Ambuyat is a starchy dish made from sago flour, often served as a gooey, sticky substance that is twirled around a bamboo fork and dipped into various sauces.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 7.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Bambangan </h2>
+                    <p class="user-profession"> Bambangan is a type of wild mango found in Sabah, often pickled or made into a condiment.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 8.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Butod </h2>
+                    <p class="user-profession"> Butod, or sago worms, are a traditional delicacy often eaten raw or cooked. They are the larvae of the sago palm weevil.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 9.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name"> Hinompuka </h2>
+                    <p class="user-profession">Hinompuka is a traditional Dusun dessert made from glutinous rice, coconut milk, and palm sugar, wrapped in banana leaves and steamed.</p>
+                </div>
+                <div class="card-item swiper-slide">
+                    <img src="images/cuisine 10.jpg" alt="User Image" class="user-image">
+                    <h2 class="user-name">Latok</h2>
+                    <p class="user-profession">Latok, also known as sea grapes, is a type of seaweed commonly eaten as a salad with a simple dressing of lime juice and chilies.</p>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="script.js"></script>
+
+<section class="text">
+    <h3 class="align"> TOP RESTAURANT </h3>
+    <p class="align1">Kundasang offers a range of restaurants where you can enjoy local and international cuisine while taking in the beautiful mountain scenery.<br>Here are some top restaurants in Kundasang:</p>
+</section>
+    
+<section class="view ">
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="images/restaurant 1.png">
+            </div>
+            <div class="content">
+                <h1> HOOGA CAFE </h1>
+                <p>Hooga is the pursuit of everyday happiness as cosy as Sunday mornings
+                    - sipping some hot coffee with bites from a cake or on a book as raindrops tap on your window together with your loved one.</p>
+                    <h1>operating hours :</h1>
+                    <p>9:30am to 10:00pm</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="images/restaurant 2.jpg">
+            </div>
+            <div class="content">
+                <h1> H.BENJAMIN RESTAURANT </h1>
+                <p>Our restaurant offers a selection of of local and western menus for a hassle-free holiday and stay.
+                    A convenience shop is also available for your sundries requirement.</p>
+                    
+                <h1>operating hours:</h1> 
+                <p>7.30am to 9.00pm daily</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="images/restaurant 3.jpg">
+            </div>
+            <div class="content">
+                <h1> PUTERI NABALU </h1>
+                <p>Our restaurant and bakery offer wholesome meals ranging from local to western cuisine as well as freshly baked buns and delicious cakes.</p>
+                <h1>operating hours :</h1>
+                <p>7:00am to 10:00pm</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <ul class="social-icons">
+            <li>
+                <a href="https://kundasang.my/charming-town-of-kundasang-sabah/"><i class="fa-brands fa-wpexplorer"></i></a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/place/Kundasang-22535865203305609?lang=en"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+            <li>
+                <a href="contact.html"><i class="fa-solid fa-circle-question"></i></i></i></a>
+            </li>
+        </ul>
+    
+        <ul class="menu">
+            <li >
+                <a href="index.html">Home</a>
+                <a href="local.html">Community</a>
+                <a href="history.html">History</a>
+                <a href="places.html">Places</a>
+                <a href="food.html">Food</a>
+                <a href="nature.html">Nature</a>
+                
+            </li>
+            
+        </ul>
+        <p> Created by Alyaa | Ilham | Shafin <i class="fa-solid fa-people-group"></i></p>
+    </footer>
+</body>
+</html>

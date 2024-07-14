@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="icons" href="images/logo.png"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a2c653daa5.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+<style>
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+}
+
+.h1{
+    text-align: left;
+}
+
+body{
+   font-family: Poppins;
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: coral;
+    text-shadow: 0 0 25px #714e39,
+                0 0 50px #714e39;
+    transform: scale(1.1);
+}
+
+span{
+    color: coral;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+   
+}
+
+.navbar a.active{
+    color: coral;
+    border-bottom: 3px solid coral;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:coral;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.home{
+    align-items: center;
+    display: flex;
+    gap: 7em;
+    width: 100%;
+    padding: 0;
+}
+    .container1{
+    min-height: 100vh;
+    background: #08071d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/gunungkinabalu.jpg") no-repeat center center/cover;
+}
+    .container1 form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.container1 form h1{
+    color: black;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container1 form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid black;
+}
+
+.container1 form input::placeholder{
+    color: black;
+}
+
+.container1 form #lastName,
+.container1 form #mobile{
+    margin-left: 20px;
+}
+
+.container1 form h4{
+    color: black;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container1 form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+
+.container1 form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container1 form #button:hover{
+    opacity: 0.7;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: black;
+    height: 190px;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+footer .social-icons, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icons li, footer .menu li{
+    list-style: none;
+}
+
+footer .social-icons li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+}
+footer .social-icons li a:hover{
+    transform: translateY(-10px);
+    color: #f1683a;
+}
+footer .menu li a{
+    font-size: 1.2em;
+    color: white;
+    margin-right:10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+footer .menu li a:hover{
+    color: #f1683a;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    opacity: 0.75;
+}
+.button{
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid coral;
+    border-radius: 0px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: coral;
+    color: black;
+    border: 2px solid coral;
+}
+</style>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Kundasang</a>
+
+        <nav class="navbar" id="nav-menu">
+    
+            <a href="index.html" >HOME</a>
+            <a href="local.html">COMMUNITY</a>
+            <a href="history.html">HISTORY</a>
+            <a href="places.html">PLACES</a>
+            <a href="nature.html">NATURE</a>
+            <a href="food.html">FOODIE</a>
+            
+      
+        </nav>
+        <div class="button">
+            <a href="contact.html">CONTACT US</a>
+        </div>
+
+      
+    </header>
+
+    <div class="container1">
+        <form>
+            <h1>Contact Us </h1>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="mobile" placeholder="Mobile" required>
+            <h4>Type Your Message Here...</h4>
+            <textarea required></textarea>
+            <input type="submit" value="Send" id="button">
+        </form>
+    </div>
+
+
+
+
+
+
+<footer>
+    
+    <ul class="social-icons">
+        <li>
+            <a href="https://kundasang.my/charming-town-of-kundasang-sabah/"><i class="fa-brands fa-wpexplorer"></i></a>
+        </li>
+        <li>
+            <a href="https://www.tiktok.com/place/Kundasang-22535865203305609?lang=en"><i class="fa-brands fa-tiktok"></i></a>
+        </li>
+        <li>
+            <a href="contact.html"><i class="fa-solid fa-circle-question"></i></i></i></a>
+        </li>
+    </ul>
+
+    <ul class="menu">
+        <li >
+            <a href="index.html">Home</a>
+            <a href="local.html">Community</a>
+            <a href="history.html">History</a>
+            <a href="places.html">Places</a>
+            <a href="food.html">Food</a>
+            <a href="nature.html">Nature</a>
+            
+        </li>
+        
+    </ul>
+    <p> Created by Alyaa | Ilham | Shafin <i class="fa-solid fa-people-group"></i></p>
+</footer>
+</body>
+</html>

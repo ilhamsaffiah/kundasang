@@ -1,0 +1,331 @@
+> syafin housemate:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="icons" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Nature</title>
+    <style type="text/css">
+
+    *{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    }
+
+     body{
+    font-family: Poppins;
+    background-color: #eae7b1;
+    color: black;
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    }
+
+     a{
+    text-decoration: none;
+    color: black;
+    }
+
+     .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    }
+
+     .logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+    }
+
+    .logo:hover{
+    color: coral;
+    text-shadow: 0 0 25px #714e39,
+                0 0 50px #714e39;
+    transform: scale(1.1);
+    }
+
+     .navbar a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    }
+
+     .navbar a.active{
+    color: coral;
+    border-bottom: 3px solid coral;
+    }
+
+    .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:coral;
+    transition: .3s;
+    }
+
+    .navbar a:hover::before {
+    width: 100%;
+    }
+
+    .button{
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid coral;
+    border-radius: 0px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    }
+
+    .button:hover{
+    background-color: coral;
+    color: black;
+    border: 2px solid coral;
+    }
+
+    .background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+
+    }
+
+    .nature-background {
+    background-image: url(images/backgroundnature.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+ .row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+    margin-top: 10%;
+    float: left;
+ }
+
+.row .col {
+    float: left;
+    padding: 50px;
+    width: 50%;
+}
+
+ h1{
+    color: black;
+    font-size: 100px;
+    margin-top: -3cm;
+ }
+
+ h5{
+    font-weight: bold;
+    font-size: 2vh;
+    color: black;
+ }
+
+ p{
+    color: black;
+    font-size: 2vh;
+    line-height: 15px;
+ }
+
+ .card{
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5;
+    display: inline-block;
+ }
+
+ .card1{
+    background-image: url(images/nature\ 1.avif);
+ }
+
+ .card2{
+    background-image: url(images/nature\ 2.jpg);
+    margin-right: 21.6%;
+ }
+
+ .card3{
+    background-image: url(images/nature\ 3.jpg);
+ }
+
+ .card4{
+    background-image: url(images/nature\ 4.webp);
+ }
+
+ .card:hover{
+    transform: translateY(-10px);
+ }
+
+ footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: black;
+    height: 190px;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+footer .social-icons, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+
+footer .social-icons li, footer .menu li{
+    list-style: none;
+}
+
+footer .social-icons li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+}
+footer .social-icons li a:hover{
+    transform: translateY(-10px);
+    color: #f1683a;
+}
+footer .menu li a{
+    font-size: 1.2em;
+    color: white;
+    margin-right:10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+footer .menu li a:hover{
+    color: #f1683a;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    opacity: 0.75;
+}
+
+
+    </style>
+</head>
+<body class="nature-background">
+    <header class="header">
+        <a href="index.html" class="logo">Kundasang</a>
+
+        <nav class="navbar" id="nav-menu">
+    
+            <a href="index.html" >HOME</a>
+            <a href="local.html">COMMUNITY</a>
+            <a href="history.html">HISTORY</a>
+            <a href="places.html">PLACES</a>
+            <a href="nature.html" class="active">NATURE</a>
+            <a href="food.html">FOODIE</a> 
+        </nav>
+        <div class="button">
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </header>
+
+    <section>
+    <div class="row">
+        <div class="col">
+            <h1>Kundasang</h1>
+            <p>Kundasang, Sabah, is renowned for its beautiful natural attractions that draw visitors from all over the world. These natural attractions highlight the beauty and diversity of Kundasang, offering a mix of adventure, relaxation, and cultural experiences set against the backdrop of stunning mountain scenery.</p>
+
+        </div>
+        <div class="col">
+            <div class="card card1">
+                <h5>Mount Kinabalu</h5>
+            </div>
+            <div class="card card2">
+                <h5>Sosodikon Hill</h5>
+            </div>
+            <div class="card card3">
+                <h5>Poring Hot Springs</h5>
+            </div>
+            <div class="card card4">
+                <h5>Kinabalu Park</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+    
+        <ul class="social-icons">
+            <li>
+                <a href="https://kundasang.my/charming-town-of-kundasang-sabah/"><i class="fa-brands fa-wpexplorer"></i></a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/place/Kundasang-22535865203305609?lang=en"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+            <li>
+                <a href="contact.html"><i class="fa-solid fa-circle-question"></i></i></i></a>
+            </li>
+        </ul>
+    
+        <ul class="menu">
+            <li >
+                <a href="index.html">Home</a>
+                <a href="local.html">Community</a>
+                <a href="history.html">History</a>
+                <a href="places.html">Places</a>
+                <a href="food.html">Food</a>
+                <a href="nature.html">Nature</a>
+                
+            </li>
+            
+        </ul>
+        <p> Created by Alyaa | Ilham | Shafin <i class="fa-solid fa-people-group"></i></p>
+    </footer>
+    
+</body>
+</html>
